@@ -6,7 +6,7 @@ import { useGLTF, Float } from '@react-three/drei';
 export default function BlackHole() {
   // Load the model from the public folder
   // Replace '/black_hole.glb' with your actual filename
-  const { scene } = useGLTF('/blackhole.glb'); 
+  const { scene } = useGLTF('/public/blackhole.glb'); 
   const modelRef = useRef();
 
   useFrame((state) => {
@@ -45,4 +45,4 @@ export default function BlackHole() {
 }
 
 // Pre-load the model to prevent "popping" when the page loads
-useGLTF.preload('/black_hole.glb');
+useGLTF.preload('/public/blackhole.glb');
